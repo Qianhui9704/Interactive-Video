@@ -58,9 +58,9 @@
 </style>
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
     <div id="tu">
-            <img src="timbre.png" onclick="gop2()" />
+            <a href="p2.html"><img src="timbre.png"/>
             Timbre
-            <img id="aaa" src="amplitude.png" onclick="gop3()" />
+            <a href="p3.html"><img id="aaa" src="amplitude.png"/>
             Amplitude
     </div>
     <div id="toask">
@@ -119,8 +119,6 @@ var towait = 29000;
       function onPlayerReady(event) {
         event.target.playVideo();
       }
-      function gop2(){window.location.href='p2.html';}
-      function gop3(){window.location.href='p3.html';}
 
 
       var done = false;
