@@ -15,7 +15,8 @@ The video didn't change. We removed the think-then-tell design in it because we 
 (1) We included emphasis of misconceptions in the instruction video
 This is a design we learnt from Coursera, which includes a pop-up window saying "how many students learning this are not doing it correctly."
 
-(2)Included formative and summative explanations at both the end 
+(2)Included formative and summative assessments
+Formative assessments are given for individual students to self-check their mastery level before they teach their peer. In formative assessment, we give them 
 
 
 (3) Added elaborative feedback at the end to include an explanation and not just correctness. We gave suggestions to readers as to which part of the video should be reviewed instead of giving them a general reminder to review the whole video. 
