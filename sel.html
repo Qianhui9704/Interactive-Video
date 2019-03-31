@@ -11,7 +11,18 @@
 	bottom:10%;
 	margin-left:-125px;
 	width:550px;height:550px;background:#000;
-	z-index:-1;}
+	z-index:300;}
+#tu{
+	position:fixed;
+	left:50%;
+	top:200px;
+	right:100px;
+	bottom:10%;
+	margin-left:-125px;
+	width:550px;height:550px;background:#000;
+	z-index:301;}
+
+
 #toask2{
 	position:fixed;
 	left:50%;
@@ -39,65 +50,23 @@
 	margin-left:-125px;
 	width:550px;height:550px;background:#000;
 	z-index:-100;}
-#player{
-	position:fixed;
-	left:50%;
-	top:100px;
-	right:100px;
-	bottom:10%;
-	margin-left:-125px;
-	width:550px;height:550px;
-	z-index:111;}
-#attach{
-	position:fixed;
-	left:50%;
-	top:650px;
-	right:100px;
-	bottom:10%;
-	margin-left:-125px;
-	width:550px;height:100px;
-	z-index:111;}
+#aaa{
+    width:200px;
+    height:170px;
+}
+  
 </style>
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-    <div id="player"></div>
-<div id="attach">
-<button type="button" onclick="tosel()">go to next stage</button>
-</div>
+    <div id="tu">
+            <img src="timbre.png" onclick="gop2()" />
+            Timbre
+            <img id="aaa" src="amplitude.png" onclick="gop3()" />
+            Amplitude
+    </div>
     <div id="toask">
-        <h>How could violin generate different pitches of sounds?</h>
-        <p id='optiona'>Because the lengths and widths of the vibrating sources are different.</p><input type="radio"  name="1" value="a" />
-        <p id='optionb'>Because the forces that people use to press the bows are different.</p><input type="radio"  name="1" value="b" />
-        <p id='optionc'>Because the material that used to create the violin is different.</p> <input type="radio"  name="1" value="c" />
- <button type="button" onclick="go()">submit</button>
-</div>
- <div id="toask2">
-        <h>A male singer is singing loudly in the music hall, the female singer is singing in company with him lightly.  Which of the following answers is correct?</h>
-        <p id='optiona'>A. The male singer��s voice has higher pitch and higher loudness while the female singer��s voice has lower pitch and lower loudness. </p><input type="radio"  name="2" value="a" />
-        <p id='optionb'>B. The male singer��s voice has lower pitch and higher loudness while the female singer��s voice has higher pitch and lower loudness. </p><input type="radio"  name="2" value="b" />
-        <p id='optionc'>C. The male singer��s voice has higher pitch but lower loudness while the female singer��s voice has lower pitch but higher loudness. </p> <input type="radio"  name="2" value="c" />
-        <p id='optionc'>D. The male singer��s voice has lower pitch and lower loudness while the female singer��s voice has higher pitch but higher loudness.</p> <input type="radio"  name="2" value="d" />
- <button type="button" onclick="gogo()">submit</button>
-</div>
-<div id="toask3">
-        <h></h>
-        <p id="ques"></p>
-        <p id='opt1'>1</p><input type="radio"  name="9" value="a" />
-        <p id='opt2'>2</p><input type="radio"  name="9" value="b" />
-        <p id='opt3'>3</p><input type="radio"  name="9" value="c" />
-        <p id='opt4'>4</p><input type="radio"  name="9" value="d" />
-        <p id="correct"></p>
-        <p id="explain"></p>
- <button type="button" onclick="resubmit()" id='bt1'>resubmit</button>
- <button type="button" onclick="gogo()" id='bt2'>submit</button>
- <button type="button" onclick="next()" id='bt3'>next</button>
+        <h>As a kind of vibration, there are two major features of sound need you to respectively learn and teach each other, please choose the one you want to learn.</h>
 
-</div>
-    <div id="dagaigai">
-        <h></h>
-        <p> You have finished all the formative questions, you can now go discuss with your partner</p>
- <button type="button" onclick="top6()" id='bt3'>get prepared for teaching your partner</button>
 
-</div>
 <script src="jquery.js"></script>
 <script>
 document.getElementById('bt1').style.display="none";
@@ -138,9 +107,10 @@ var towait = 29000;
         player = new YT.Player('player', {
           height: '550',
           width: '550',
-          videoId: 'uVUkrUBUd1Y',
+          videoId: 'VJI9X-K-y-E',
           events: {
-          
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
           }
         });
       }
@@ -149,6 +119,8 @@ var towait = 29000;
       function onPlayerReady(event) {
         event.target.playVideo();
       }
+      function gop2(){window.location.href='p2.html';}
+      function gop3(){window.location.href='p3.html';}
 
 
       var done = false;
@@ -174,9 +146,6 @@ document.getElementById('toask2').style['z-index']=11;
 document.getElementById('toask2').style['-webkit-transform']='translateZ(0)';
 }
 var quesn=0;
-function tosel(){
-    window.location.href='p5.html';
-}
 function gogo(){
 
  a=$('input:radio[name="9"]:checked').val();
