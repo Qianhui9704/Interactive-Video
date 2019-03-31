@@ -5,17 +5,18 @@ Second, our instructional video follows jigsaw instruction in that learners are 
 The most anticipated failure is that students fail to master their own parts, in other words, they fail to become a subject matter of expertise in their own field. 
 
 2. How the tool supports scaffold for positive interdependence and create incentives for individual accountability.
-For positive interdependence, the only way that they are going to learn all the contents is to rely on the partner. 
-
-For individual accountability, both learners are going to take the same quiz together. An extrinsic way to create individual accountability is to check the learner's own understanding of knowledge first before allowing him or her to teach their peer.
+For positive interdependence, the only way that they are going to learn all the contents is to rely on the partner. For individual accountability, both learners are going to take the same quiz together. An extrinsic way to create individual accountability is to check the learner's own understanding of knowledge first before allowing him or her to teach their peer.
 
 
 3. What was reused from project 1 and all the changes both in instruction and in technical design. 
 Writeup also states the limitation of re-using instructional material
+The video didn't change. We removed the think-then-tell design in it because we are not really planning a discovery learning. We used some questions from A1 as well. 
 
-(1) We included misconceptions in the instruction video
+(1) We included emphasis of misconceptions in the instruction video
+This is a design we learnt from Coursera, which includes a pop-up window saying "how many students learning this are not doing it correctly."
 
-(2) Gave feedback when the student gives an answer before jumping to other parts of the video
+(2)Included formative and summative explanations at both the end 
+
 
 (3) Added elaborative feedback at the end to include an explanation and not just correctness. We gave suggestions to readers as to which part of the video should be reviewed instead of giving them a general reminder to review the whole video. 
 
