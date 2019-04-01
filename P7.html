@@ -101,7 +101,8 @@
 </div>
     <div id="dagaigai">
         <h></h>
-        You have finished all the summative questions, your point is<p id='fen'></p> out of 6
+        You have finished the summative test, your point is <p id='fen'></p> out of 6.
+        We are waiting for your teammate's score, and your final score would be the average score of you two.
 
 
 </div>
@@ -110,16 +111,16 @@
     
 document.getElementById('bt1').style.display="none";
 document.getElementById('bt3').style.display="none";
-var ques= new Array('Which is the major vibrating part in a violin?',
-             'Speaking of the wind chimes, it has both the beauty of visual styling and the enjoyment of hearing. With the same force, Jonanthan tapped the metal pipes made of the same material and the same thickness but different lengths in the wind chime shown, listening carefully to the sound they made. His method is best for studying which aspect of sound? ',
-             'Which of the following cases involves the change of timbre?',
-             'As an important quality of sounds, amplitude for a wave may be best described as:',
-             'In an orchestra consisting of various instruments, how can we distinguish one instrument from another?',
-             'While playing the violin, which of the following actions can make the highest (sharpest) sound?'
+var ques= new Array('Q1.Which is the major vibrating part in a violin?',
+             'Q2.Speaking of the wind chimes, it has both the beauty of visual styling and the enjoyment of hearing. With the same force, Jonanthan tapped the metal pipes made of the same material and the same thickness but different lengths in the wind chime shown, listening carefully to the sound they made. His method is best for studying which aspect of sound? ',
+             'Q3.Which of the following cases involves the change of timbre?',
+             'Q4.As an important quality of sounds, amplitude for a wave may be best described as:',
+             'Q5.In an orchestra consisting of various instruments, how can we distinguish one instrument from another?',
+             'Q6.While playing the violin, which of the following actions can make the highest (sharpest) sound?'
                     );
-             var optiona= new Array('Bow','The relationship between timbre and metal tube material','drummer beats the drum','How strong it is','Different pitches they make','Press a wider string while making the vibrating part shorter');
+             var optiona= new Array('Bow','The relationship between timbre and metal tube material','Drummer beats the drum lightly or heavily','How strong it is','Different pitches they make','Press a wider string while making the vibrating part shorter');
              var optionb= new Array('Bridge','The relationship between amplitude and metal tube material','More and more people join the chorus','How sharp it is','Different amplitudes of sounds','Press a narrower string while making the vibrating part shorter');
-      var optionc= new Array('Strings','The relationship between pitch and length of metal tube','A rocket is launching','How delightful it is','Different melodies that they play','Press a wider string while making the vibrating part longer');
+      var optionc= new Array('Strings','The relationship between pitch and length of metal tube','The violinist stops performing while the pianist starts','How delightful it is','Different melodies that they play','Press a wider string while making the vibrating part longer');
              var optiond= new Array('Top plate','The relationship between speed and metal tube length','A tuner tunes a piano','How regular it is；','Different timbres that each instrument has','Press a narrower string while making the vibrating part longer');
              var answer= new Array('c','c','b','b','a','b');
              var explain= new Array('传输层提供可靠的端对端的服务；数据链路层使有差错的物理信道变成无差错的逻辑链路；物理层提供原始二进制数据的传输；网络层主要负责数据的路径选择、拥塞控制。故选D。',
