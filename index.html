@@ -14,35 +14,158 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
-
-<style>
-#player{
-	position:fixed;
-	left:50%;
-	top:100px;
-	right:100px;
-	bottom:10%;
-	margin-left:-125px;
-	width:550px;height:550px;
-	z-index:1;}
-body{
-    background-image: url("violin.jpg");
-    background-color: #FFFFFF;
-}
-</style>
-
-
-<body>
+<body background="violin.jpg" style="z-index:-100;position:absolute;left:0;top:0;background-size:cover;">
+<font color="#FFFFFF">
+    <style>
+        #toask{
+            position:fixed;
+            left:50%;
+            top:100px;
+            right:100px;
+            bottom:10%;
+            margin-left:-125px;
+            width:550px;height:550px;background:#000;
+            z-index:10;}
+        #dagaigai{
+            position:fixed;
+            left:50%;
+            top:100px;
+            right:100px;
+            bottom:10%;
+            margin-left:-125px;
+            width:550px;height:550px;background:#000;
+            z-index:-100;}
+        #player{
+            position:fixed;
+            left:50%;
+            top:100px;
+            right:100px;
+            bottom:10%;
+            margin-left:-125px;
+            width:550px;height:550px;
+            z-index:1;}
+        .btn{
+            float: right;
+        }
+    </style>
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
     <div id="player"></div>
-    <div id="Caption">
-        <h2>Do you know violin works?</h2>
+    <div id="toask">
         <p>You will cooperate with your partner to learn the mechanism of sound and violin. You two will: </p>
-            <li>Individually watch a background introduction video.</li><br>
-            <li>Discuss and each chooses a specific part from part A and B.</li><br>
-            <li>Based on your choice, individually learn a specific sub-question by video and formative assessment. </li><br>
-            <li>Teach your partner the part you just learned 5. take an individual test which will contain all parts A and B and determine your grade. When you are ready, press the following button.</li><br>
+        <li>Individually watch a background introduction video together.</li><br>
+        <li>Be assigned to watch different parts of a video.</li><br>
+        <li>After watching your own video clip, each person is going to receive a formative assessment to make sure you understand the content. </li><br>
+        <li>Teach your partner the part you just learned.</li><br>
+        <li>Take an individual test which will cover both parts.</li><br>
         <button type="button" class="btn btn-light" onclick="ready()">Start!</button>
     </div>
+    <script src="jquery.js"></script>
+    <script>
 
+        // 2. This code loads the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '550',
+                width: '550',
+                videoId: 'VJI9X-K-y-E',
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+        var quesn=0;
+        function ready(){
+            window.location.href='vid.html';
+        }
+        function gogo(){
+
+            a=$('input:radio[name="9"]:checked').val();
+            if(a===undefined){alert("input something, ok?");return undefined;}
+            document.getElementById('bt1').style.display="";
+            document.getElementById('bt3').style.display="";
+            if(a==answer[quesn]){
+                document.getElementById('correct').innerHTML="Correct!";
+            }
+            else{document.getElementById('correct').innerHTML="Not Correct, you may read the explanation and try again";}
+            document.getElementById('explain').innerHTML=explain[quesn];}
+        function resubmit(){
+            a=$('input:radio[name="9"]:checked').val();
+            if(a==answer[quesn]){
+                document.getElementById('correct').innerHTML="Correct!";
+            }
+            else{document.getElementById('correct').innerHTML="Not Correct, you may read the explanation and try again";}
+            document.getElementById('explain').innerHTML=explain[quesn];
+        }
+        function refresh(){
+            document.getElementById('bt1').style.display="none";
+            document.getElementById('bt3').style.display="none";
+            document.getElementById("ques").innerHTML=ques[quesn];
+            document.getElementById("opt1").innerHTML=optiona[quesn];
+            document.getElementById("opt2").innerHTML=optionb[quesn];
+            document.getElementById("opt3").innerHTML=optionc[quesn];
+            document.getElementById("opt4").innerHTML=optiond[quesn];
+            document.getElementById("correct").innerHTML="";
+            document.getElementById("explain").innerHTML="";
+        }
+        function next(){
+            quesn++;
+            if(quesn>=ques.length){
+                document.getElementById('dagaigai').style['z-index']=101;
+            }
+            else{
+
+                refresh();}
+        }
+        function top6(){
+            window.location.href='./p6.html';
+        }
+        function last(){
+            quesn--;
+            refresh();
+        }
+
+        function go(){
+            a=$('input:radio[name="1"]:checked').val();
+            if(a=='a'){
+                document.getElementById('player').style['z-index']=10;
+                document.getElementById('player').style['-webkit-transform']='translateZ(0)';
+                player.seekTo(40,true);
+                towait=140000;
+                player.playVideo();
+                setTimeout(stopVideo2, towait);
+            }
+
+            if(a=='b'){
+                document.getElementById('player').style['z-index']=10;
+                document.getElementById('player').style['-webkit-transform']='translateZ(0)';
+                player.seekTo(180,true);
+                towait=197000;
+                player.playVideo();
+                setTimeout(stopVideo2, towait);}
+
+            if(a=='c'){
+                document.getElementById('player').style['z-index']=10;
+                document.getElementById('player').style['-webkit-transform']='translateZ(0)';
+                player.seekTo(377,true);
+                towait=175000;
+                player.playVideo();
+                setTimeout(stopVideo2, towait);}
+        }
+    </script>
+</font>
 </body>
 </html>
+
+
+
+
