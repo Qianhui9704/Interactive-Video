@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0872ec0-8d3a-464a-9d0f-0bddb7f43978" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vid.html" beforeDir="false" afterPath="$PROJECT_DIR$/vid.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/p7.html" beforeDir="false" afterPath="$PROJECT_DIR$/p7.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,13 +33,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1165" />
+          <entry key="html" value="1234" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="8" />
-          <entry key="HTML" value="1157" />
+          <entry key="HTML" value="1226" />
         </counts>
       </usages-collector>
     </session>
@@ -93,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p4.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="14" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -111,7 +110,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/p7.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1273" />
+            <state relative-caret-position="479">
+              <caret line="66" column="11" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -123,8 +124,8 @@
       <find>go to next</find>
       <find>btn</find>
       <find>submit</find>
-      <find>please teach</find>
       <find>please</find>
+      <find>please teach</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,6 +139,7 @@
         <option value="$PROJECT_DIR$/p4.html" />
         <option value="$PROJECT_DIR$/p3.html" />
         <option value="$PROJECT_DIR$/p6.html" />
+        <option value="$PROJECT_DIR$/p7.html" />
       </list>
     </option>
   </component>
@@ -148,8 +150,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="36" />
-    <option name="y" value="32" />
+    <option name="x" value="57" />
+    <option name="y" value="25" />
     <option name="width" value="1440" />
     <option name="height" value="814" />
   </component>
@@ -199,15 +201,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554081356406</updated>
-      <workItem from="1554081359007" duration="5372000" />
+      <workItem from="1554081359007" duration="6383000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5372000" />
+    <option name="totallyTimeSpent" value="6383000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="32" width="1440" height="814" extended-state="0" />
+    <frame x="57" y="25" width="1440" height="814" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -261,13 +263,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/p3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -285,9 +280,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/p4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/p7.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1273" />
+        <state relative-caret-position="479">
+          <caret line="66" column="11" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
+        </state>
       </provider>
     </entry>
   </component>

@@ -1,5 +1,18 @@
 <!DOCTYPE html>
-<html>	
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
 <body background="violin.jpg" style="z-index:-100;position:absolute;left:0;top:0;background-size:cover;">
 <font color="#FFFFFF">
 <style>
@@ -48,6 +61,12 @@
 	margin-left:-125px;
 	width:550px;height:550px;
 	z-index:1;}
+#quan{
+    position:relative;
+    left:-20px;
+    top:-41px;
+}
+
 </style>
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
     
@@ -69,10 +88,10 @@
 <div id="toask3">
         <h></h>
         <p id="ques"></p>
-        <p id='opt1'>1</p><input type="radio"  name="9" value="a" />
-        <p id='opt2'>2</p><input type="radio"  name="9" value="b" />
-        <p id='opt3'>3</p><input type="radio"  name="9" value="c" />
-        <p id='opt4'>4</p><input type="radio"  name="9" value="d" />
+        <p id='opt1'>1</p><input type="radio"  name="9" value="a" id="quan"/>
+        <p id='opt2'>2</p><input type="radio"  name="9" value="b" id="quan"/>
+        <p id='opt3'>3</p><input type="radio"  name="9" value="c" id="quan"/>
+        <p id='opt4'>4</p><input type="radio"  name="9" value="d" id="quan"/>
         <p id="correct"></p>
        
  <button type="button" onclick="resubmit()" id='bt1'>resubmit</button>
