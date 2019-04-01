@@ -19,6 +19,11 @@
 .btn{
     float: right;
 }
+#quan{
+    position:relative;
+    left:-20px;
+    top:-41px;
+}
 #toask3{
 	position:fixed;
 	left:50%;
@@ -42,10 +47,10 @@
 <div id="toask3">
         <h></h>
         <p id="ques"></p>
-        <p id='opt1'>1</p><input type="radio"  name="9" value="a" />
-        <p id='opt2'>2</p><input type="radio"  name="9" value="b" />
-        <p id='opt3'>3</p><input type="radio"  name="9" value="c" />
-        <p id='opt4'>4</p><input type="radio"  name="9" value="d" />
+        <p id='opt1'>1</p><input type="radio"  name="9" value="a" id='quan'/>
+        <p id='opt2'>2</p><input type="radio"  name="9" value="b" id='quan'/>
+        <p id='opt3'>3</p><input type="radio"  name="9" value="c" id='quan'/>
+        <p id='opt4'>4</p><input type="radio"  name="9" value="d" id='quan'/>
         <p id="correct"></p>
         <p id="explain"></p>
  <button type="button" class="btn btn-light" onclick="resubmit()" id='bt1'>resubmit</button>

@@ -3,6 +3,11 @@
 <body background="violin.jpg" style="z-index:-100;position:absolute;left:0;top:0;background-size:cover;">
 <font color="#FFFFFF">
 <style>
+    #quan{
+    position:relative;
+    left:-20px;
+    top:-41px;
+}
 #toask{
 	position:fixed;
 	left:50%;
@@ -69,10 +74,10 @@
 <div id="toask3">
         <h></h>
         <p id="ques"></p>
-        <p id='opt1'>1</p><input type="radio"  name="9" value="a" />
-        <p id='opt2'>2</p><input type="radio"  name="9" value="b" />
-        <p id='opt3'>3</p><input type="radio"  name="9" value="c" />
-        <p id='opt4'>4</p><input type="radio"  name="9" value="d" />
+        <p id='opt1'>1</p><input type="radio"  name="9" value="a" id='quan'/>
+        <p id='opt2'>2</p><input type="radio"  name="9" value="b" id='quan'/>
+        <p id='opt3'>3</p><input type="radio"  name="9" value="c" id='quan'/>
+        <p id='opt4'>4</p><input type="radio"  name="9" value="d" id='quan'/>
         <p id="correct"></p>
         <p id="explain"></p>
  <button type="button" onclick="resubmit()" id='bt1'>resubmit</button>
@@ -92,10 +97,10 @@ document.getElementById('bt1').style.display="none";
 document.getElementById('bt3').style.display="none";
 var ques= new Array(
              'During a concert rehearsal, the command asks violinist to play forte notes, what should the violinist change: ',
-             'Which of the following cases involves only the change of the amplitude of the sound?','Orchestra plays a march or play a sonata');
+             'Which of the following cases involves only the change of the amplitude of the sound?');
              var optiona= new Array('Amplitude','National anthem is played in a flag-raising ceremony');
              var optionb= new Array('Timbre ','An engine is being increased to its full power');
-             var optionc= new Array('Pitch','A drumer is beating the drum more and more heavily');
+             var optionc= new Array('Pitch','Orchestra plays a march or play a sonata');
              var optiond= new Array('All them above','A drumer is beating the drum more and more heavily');
              var answer= new Array('a','d');
              var explain= new Array(
@@ -189,6 +194,10 @@ function next(){
     quesn++;
     if(quesn>=ques.length){
         document.getElementById('dagaigai').style['z-index']=101;
+        document.getElementById('quan').style.display="none";
+         document.getElementById('quan').style.display="none";
+          document.getElementById('quan').style.display="none";
+           document.getElementById('quan').style.display="none";
     }
     else{
     
