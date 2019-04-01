@@ -12,16 +12,20 @@
 	margin-left:-125px;
 	width:550px;height:550px;background:#000;
 	z-index:300;}
-#tu{
+.image{
 	position:fixed;
 	left:50%;
 	top:200px;
-	right:100px;
-	bottom:10%;
-	margin-left:-125px;
-	width:550px;height:550px;background:#000;
+	width:550px;
+    height:550px;
 	z-index:301;}
+.Pitch {
+    padding: 10px;
+}
 
+.Timbre {
+    padding: 10px;
+}
 
 #toask2{
 	position:fixed;
@@ -57,14 +61,19 @@
   
 </style>
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-    <div id="tu">
-            <img src="timbre.png" onclick="gop2()" />
-            Timbre
-            <img id="aaa" src="amplitude.png" onclick="gop3()" />
-            Amplitude
+    <div class="image">
+        <div class="Pitch">
+            <img src="timbre.png" onclick="gop2()" /><br>
+            <span>Pitch</span>
+        </div>
+        <div class="Timbre">
+            <img id="aaa" src="amplitude.png" onclick="gop3()" /><br>
+            <span>Timbre&Amplitude</span>
+        </div>
     </div>
     <div id="toask">
-        <h>As a kind of vibration, there are two major features of sound need you to respectively learn and teach each other, please choose the one you want to learn.</h>
+        <h>As a kind of vibration, there are three major features of sound that you need to learn respectively and teach each other.
+            Learner A will learn sound pitch, while learner B will learn amplitude and timbre. Both types of learners will be assigned by the instructor.</h>
 
 
 <script src="jquery.js"></script>
