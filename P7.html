@@ -92,17 +92,17 @@
 document.getElementById('bt1').style.display="none";
 document.getElementById('bt3').style.display="none";
 var ques= new Array('Which is the major vibrating part in a violin?',
-             'Which of the following cases involves only the change of the amplitude of the sound?',
+             'Speaking of the wind chimes, it has both the beauty of visual styling and the enjoyment of hearing. With the same force, Jonanthan tapped the metal pipes made of the same material and the same thickness but different lengths in the wind chime shown, listening carefully to the sound they made. His method is best for studying which aspect of sound? ',
              'Which of the following cases involves the change of timbre?',
              'As an important quality of sounds, amplitude for a wave may be best described as:',
              'In an orchestra consisting of various instruments, how can we distinguish one instrument from another?',
-             'While playing the violin, which of the following actions can make the highest sound?'
+             'While playing the violin, which of the following actions can make the highest (sharpest) sound?'
                     );
-             var optiona= new Array('Bow','Orchestra plays a march','A singer sings a song.','How strong it is','Different pitches they make','Press a wider string while making the vibrating part shorter');
-             var optionb= new Array('Bridge','National anthem is played in a flag-raising ceremony','More and more people join the chorus','How sharp it is','Different amplitudes of sounds','Press a narrower string while making the vibrating part shorter');
-      var optionc= new Array('Strings','An engine is being increased to its full power','A rocket is launching','How delightful it is','Different melodies that they play','Press a wider string while making the vibrating part longer');
-             var optiond= new Array('Top plate','A drumer is beating the drum heavily','A tuner tunes a piano','How regular it is；','Different timbres that each instrument has','Press a narrower string while making the vibrating part longer');
-             var answer= new Array('d','c','c','b','c','c');
+             var optiona= new Array('Bow','The relationship between timbre and metal tube material','drummer beats the drum','How strong it is','Different pitches they make','Press a wider string while making the vibrating part shorter');
+             var optionb= new Array('Bridge','The relationship between amplitude and metal tube material','More and more people join the chorus','How sharp it is','Different amplitudes of sounds','Press a narrower string while making the vibrating part shorter');
+      var optionc= new Array('Strings','The relationship between pitch and length of metal tube','A rocket is launching','How delightful it is','Different melodies that they play','Press a wider string while making the vibrating part longer');
+             var optiond= new Array('Top plate','The relationship between speed and metal tube length','A tuner tunes a piano','How regular it is；','Different timbres that each instrument has','Press a narrower string while making the vibrating part longer');
+             var answer= new Array('c','c','b','b','a','b');
              var explain= new Array('传输层提供可靠的端对端的服务；数据链路层使有差错的物理信道变成无差错的逻辑链路；物理层提供原始二进制数据的传输；网络层主要负责数据的路径选择、拥塞控制。故选D。',
              '语义、语法、时序（定时）是网络协议三个主要组成部分。结构不是网络协议的组成部分之一。故选C。',
              '500转换成二进制为111110100，有9位。将子网掩码255.255.255.255从后向前的9位变成0，即为所求子网掩码255.255.254.0（11111111.11111111.11111110.00000000）。故选C。',
@@ -167,7 +167,7 @@ document.getElementById('toask2').style['-webkit-transform']='translateZ(0)';
 var quesn=0;
 var conum=0;
 function gogo(){
-
+ document.getElementById('bt2').style.display="none";
  a=$('input:radio[name="9"]:checked').val();
 if(a===undefined){alert("input something, ok?");return undefined;}
  document.getElementById('bt1').style.display="";
