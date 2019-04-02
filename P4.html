@@ -19,11 +19,6 @@
 .btn{
     float: right;
 }
-#quan{
-    position:relative;
-    left:-20px;
-    top:-41px;
-}
 #toask3{
 	position:fixed;
 	left:50%;
@@ -47,10 +42,10 @@
 <div id="toask3">
         <h></h>
         <p id="ques"></p>
-        <p id='opt1'>1</p><input type="radio"  name="9" value="a" id='quan'/>
-        <p id='opt2'>2</p><input type="radio"  name="9" value="b" id='quan'/>
-        <p id='opt3'>3</p><input type="radio"  name="9" value="c" id='quan'/>
-        <p id='opt4'>4</p><input type="radio"  name="9" value="d" id='quan'/>
+        <input type="radio"  name="9" value="a" id='quan'/>&nbsp;<span id='opt1'>1</span>
+        <input type="radio"  name="9" value="b" id='quan'/>&nbsp;<span id='opt2'>2</span>
+        <input type="radio"  name="9" value="c" id='quan'/>&nbsp;<span id='opt3'>3</span>
+        <input type="radio"  name="9" value="d" id='quan'/>&nbsp;<span id='opt4'>4</span>
         <p id="correct"></p>
         <p id="explain"></p>
  <button type="button" class="btn btn-light" onclick="gogo()" id='bt2'>submit</button>
@@ -165,7 +160,7 @@ function next(){
     refresh();}
 }
 function top6(){
-    window.location.href='p6.html';
+    window.location.href='P6.html';
 }
 function last(){
     quesn--;
