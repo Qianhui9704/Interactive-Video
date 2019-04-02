@@ -69,25 +69,23 @@
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
 
 
-<div id="toask3">
+<<div id="toask3">
         <p id="ques"></p>
-        <input type="radio"  name="9" value="a" id="quan"/><span id='opt1'>1</span><br><br>
-        <input type="radio"  name="9" value="b" id="quan"/><span id='opt2'>2</span><br><br>
-        <input type="radio"  name="9" value="c" id="quan"/><span id='opt3'>3</span><br><br>
-        <input type="radio"  name="9" value="d" id="quan"/><span id='opt4'>4</span><br><br>
+        <input type="radio"  name="9" value="a"/>&nbsp;<span id='opt1'>1</span><br><br>
+        <input type="radio"  name="9" value="b"/>&nbsp;<span id='opt2'>2</span><br><br>
+        <input type="radio"  name="9" value="c"/>&nbsp;<span id='opt3'>3</span><br><br>
+        <input type="radio"  name="9" value="d"/>&nbsp;<span id='opt4'>4</span><br><br>
 
  <button type="button" class ='btn btn-light' onclick="resubmit()" id='bt1'>resubmit</button>
  <button type="button" class ='btn btn-light' onclick="gogo()" id='bt2'>submit</button>
  <button type="button" class ='btn btn-light' onclick="next()" id='bt3'>next</button>
 
-</div>
+<!--</div>
     <div id="dagaigai">
 
         You have finished the summative test, your point is out of 6.
         We are waiting for your teammate's score, and your final score would be the average score of you two.
-
-
-</div>
+-->
 <script src="jquery.js"></script>
 <script>
     
@@ -128,19 +126,24 @@ var ques= new Array('Q1.Which is the major vibrating part in a violin?',
 
 
 var quesn=0;
-var conum=0;
-function gogo(){
- document.getElementById('bt2').style.display="none";
- a=$('input:radio[name="9"]:checked').val();
-if(a===undefined){alert("input something, ok?");return undefined;}
- document.getElementById('bt1').style.display="";
- document.getElementById('bt3').style.display="";
-if(a==answer[quesn]){
-    document.getElementById('correct').innerHTML="Correct!";
-    conum++;
+var conum=0 ;
+function gogo() {
+    document.getElementById('bt2').style.display = "none";
+    a = $('input:radio[name="9"]:checked').val();
+
+    if (a === undefined) {
+        alert("You need to write your answer!");
+        return undefined;
+    }
+    document.getElementById('bt1').style.display = "";
+    document.getElementById('bt3').style.display = "";
+
+    if (a == answer[quesn]) {
+        conum++;
+    }
 }
-else{document.getElementById('correct').innerHTML="Not Correct, you may read the explanation and try again";}
-document.getElementById('explain').innerHTML=explain[quesn];}
+
+
 function resubmit(){
 a=$('input:radio[name="9"]:checked').val();
 if(a==answer[quesn]){
@@ -157,8 +160,6 @@ function refresh(){
   document.getElementById("opt2").innerHTML=optionb[quesn];
   document.getElementById("opt3").innerHTML=optionc[quesn];
   document.getElementById("opt4").innerHTML=optiond[quesn];
-  document.getElementById("correct").innerHTML="";
-  document.getElementById("explain").innerHTML=""; 
 }
 refresh();
 
@@ -166,11 +167,8 @@ function next(){
     document.getElementById('bt2').style.display="";
     quesn++;
     if(quesn>=ques.length){
-    document.getElementById('fen').innerHTML=conum; 
-    document.getElementById('dagaigai').style['z-index']=101;
-    document.getElementById('toask3').style.display="none";
-    document.getElementById('bt2').style.display="none";
-    document.getElementById('bt3').style.display="none";
+
+    alert("You have finished the summative test, your point is" + conum + "out of 6. We are waiting for your teammate's score, and your final score would be the average score of you two.");
 
 
     }
