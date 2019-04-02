@@ -82,7 +82,6 @@
 
 </div>
     <div id="dagaigai">
-        <h></h>
         You have finished the summative test, your point is out of 6.
         We are waiting for your teammate's score, and your final score would be the average score of you two.
 
@@ -226,48 +225,7 @@ function next(){
     
     refresh();}
 }
-function top6(){
-    window.location.href='P6.html';
-}
-function last(){
-    quesn--;
-    refresh();
-}
 
-
-
-
-
-
-
-function go(){
- a=$('input:radio[name="1"]:checked').val();
-if(a=='a'){
-document.getElementById('player').style['z-index']=10;
-document.getElementById('player').style['-webkit-transform']='translateZ(0)';
-player.seekTo(40,true);
-towait=140000;
-player.playVideo();
-setTimeout(stopVideo2, towait);
-}
-
-if(a=='b'){
-document.getElementById('player').style['z-index']=10;
-document.getElementById('player').style['-webkit-transform']='translateZ(0)';
-player.seekTo(180,true);
-towait=197000;
-player.playVideo();
-setTimeout(stopVideo2, towait);}
-
-if(a=='c'){
-document.getElementById('player').style['z-index']=10;
-document.getElementById('player').style['-webkit-transform']='translateZ(0)';
-player.seekTo(377,true);
-towait=175000;
-player.playVideo();
-setTimeout(stopVideo2, towait);}
-}
     </script>
-</font>
   </body>
 </html>
