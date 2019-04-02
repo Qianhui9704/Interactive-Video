@@ -66,6 +66,9 @@
     left:-20px;
     top:-41px;
 }
+.btn {
+    float: right;
+}
 
 </style>
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
@@ -78,11 +81,10 @@
         <p id='opt2'>2</p><input type="radio"  name="9" value="b" id="quan"/>
         <p id='opt3'>3</p><input type="radio"  name="9" value="c" id="quan"/>
         <p id='opt4'>4</p><input type="radio"  name="9" value="d" id="quan"/>
-        <p id="correct"></p>
        
- <button type="button" onclick="resubmit()" id='bt1'>resubmit</button>
- <button type="button" onclick="gogo()" id='bt2'>submit</button>
- <button type="button" onclick="next()" id='bt3'>next</button>
+ <button type="button" class ='btn btn-light' onclick="resubmit()" id='bt1'>resubmit</button>
+ <button type="button" class ='btn btn-light' onclick="gogo()" id='bt2'>submit</button>
+ <button type="button" class ='btn btn-light' onclick="next()" id='bt3'>next</button>
 
 </div>
     <div id="dagaigai">
@@ -104,19 +106,32 @@ var ques= new Array('Q1.Which is the major vibrating part in a violin?',
              'Q5.In an orchestra consisting of various instruments, how can we distinguish one instrument from another?',
              'Q6.While playing the violin, which of the following actions can make the highest (sharpest) sound?'
                     );
-             var optiona= new Array('Bow','The relationship between timbre and metal tube material','Drummer beats the drum lightly or heavily','How strong it is','Different pitches they make','Press a wider string while making the vibrating part shorter');
-             var optionb= new Array('Bridge','The relationship between amplitude and metal tube material','More and more people join the chorus','How sharp it is','Different amplitudes of sounds','Press a narrower string while making the vibrating part shorter');
-      var optionc= new Array('Strings','The relationship between pitch and length of metal tube','The violinist stops performing while the pianist starts','How delightful it is','Different melodies that they play','Press a wider string while making the vibrating part longer');
-             var optiond= new Array('Top plate','The relationship between speed and metal tube length','A tuner tunes a piano','How regular it is；','Different timbres that each instrument has','Press a narrower string while making the vibrating part longer');
+             var optiona= new Array('Bow',
+                 'The relationship between timbre and metal tube material',
+                 'Drummer beats the drum lightly or heavily',
+                 'How strong it is',
+                 'Different pitches they make',
+                 'Press a wider string while making the vibrating part shorter');
+             var optionb= new Array('Bridge',
+                 'The relationship between amplitude and metal tube material',
+                 'More and more people join the chorus',
+                 'How sharp it is',
+                 'Different amplitudes of sounds',
+                 'Press a narrower string while making the vibrating part shorter');
+             var optionc= new Array('Strings',
+                 'The relationship between pitch and length of metal tube',
+                 'The violinist stops performing while the pianist starts',
+                 'How loud it is',
+                 'Different melodies that they play',
+                 'Press a wider string while making the vibrating part longer');
+             var optiond= new Array('Top plate',
+                 'The relationship between speed and metal tube length',
+                 'A tuner tunes a piano',
+                 'How regular it is',
+                 'Different timbres that each instrument has',
+                 'Press a narrower string while making the vibrating part longer');
              var answer= new Array('c','c','b','b','a','b');
-             var explain= new Array('传输层提供可靠的端对端的服务；数据链路层使有差错的物理信道变成无差错的逻辑链路；物理层提供原始二进制数据的传输；网络层主要负责数据的路径选择、拥塞控制。故选D。',
-             '语义、语法、时序（定时）是网络协议三个主要组成部分。结构不是网络协议的组成部分之一。故选C。',
-             '500转换成二进制为111110100，有9位。将子网掩码255.255.255.255从后向前的9位变成0，即为所求子网掩码255.255.254.0（11111111.11111111.11111110.00000000）。故选C。',
-             '集线器共享带宽，交换机独享带宽',
-             '若将5000字节封装成IP数据报，需要加上至少20字节的IP首部，则总的IP数据报长度为5020字节，大于以太网的上限1500字节所以必须分片。一个IP数据报能传送的最大数据为1480字节，所以需要分成4片。',
-             'ICMP是Internet控制报文协议，控制消息是指网络通不通、主机是否可达、路由是否可用等网络本身的消息',
-             '路由器会修改报文内容，比如NAT协议，就利用了路由器此特点，起到屏蔽内部主机IP的作用'
-                    );
+
             
 var a;
 var towait = 29000;
