@@ -1,31 +1,29 @@
 <!DOCTYPE html>
-<html>	
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
 <body background="violin.jpg" style="z-index:-100;position:absolute;left:0;top:0;background-size:cover;">
 <font color="#FFFFFF">
 <style>
-    #quan{
+.btn{
+    float: right;
+}
+#quan{
     position:relative;
     left:-20px;
     top:-41px;
 }
-#toask{
-	position:fixed;
-	left:50%;
-	top:100px;
-	right:100px;
-	bottom:10%;
-	margin-left:-125px;
-	width:550px;height:550px;background:#000;
-	z-index:-1;}
-#toask2{
-	position:fixed;
-	left:50%;
-	top:100px;
-	right:100px;
-	bottom:10%;
-	margin-left:-125px;
-	width:550px;height:550px;background:#000;
-	z-index:-11;}
 #toask3{
 	position:fixed;
 	left:50%;
@@ -44,33 +42,8 @@
 	margin-left:-125px;
 	width:550px;height:550px;background:#000;
 	z-index:-100;}
-#player{
-	position:fixed;
-	left:50%;
-	top:100px;
-	right:100px;
-	bottom:10%;
-	margin-left:-125px;
-	width:550px;height:550px;
-	z-index:1;}
 </style>
-    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-   
-    <div id="toask">
-        <h>How could violin generate different pitches of sounds?</h>
-        <p id='optiona'>Because the lengths and widths of the vibrating sources are different.</p><input type="radio"  name="1" value="a" />
-        <p id='optionb'>Because the forces that people use to press the bows are different.</p><input type="radio"  name="1" value="b" />
-        <p id='optionc'>Because the material that used to create the violin is different.</p> <input type="radio"  name="1" value="c" />
- <button type="button" onclick="go()">submit</button>
-</div>
- <div id="toask2">
-        <h>A male singer is singing loudly in the music hall, the female singer is singing in company with him lightly.  Which of the following answers is correct?</h>
-        <p id='optiona'>A. The male singer��s voice has higher pitch and higher loudness while the female singer��s voice has lower pitch and lower loudness. </p><input type="radio"  name="2" value="a" />
-        <p id='optionb'>B. The male singer��s voice has lower pitch and higher loudness while the female singer��s voice has higher pitch and lower loudness. </p><input type="radio"  name="2" value="b" />
-        <p id='optionc'>C. The male singer��s voice has higher pitch but lower loudness while the female singer��s voice has lower pitch but higher loudness. </p> <input type="radio"  name="2" value="c" />
-        <p id='optionc'>D. The male singer��s voice has lower pitch and lower loudness while the female singer��s voice has higher pitch but higher loudness.</p> <input type="radio"  name="2" value="d" />
- <button type="button" onclick="gogo()">submit</button>
-</div>
+
 <div id="toask3">
         <h></h>
         <p id="ques"></p>
@@ -80,35 +53,43 @@
         <p id='opt4'>4</p><input type="radio"  name="9" value="d" id='quan'/>
         <p id="correct"></p>
         <p id="explain"></p>
- <button type="button" onclick="resubmit()" id='bt1'>resubmit</button>
- <button type="button" onclick="gogo()" id='bt2'>submit</button>
- <button type="button" onclick="next()" id='bt3'>next</button>
+ <button type="button" class="btn btn-light" onclick="gogo()" id='bt2'>submit</button>
+ <button type="button" class="btn btn-light" onclick="resubmit()" id='bt1'>resubmit</button>
+ <button type="button" class="btn btn-light" onclick="next()" id='bt3'>next</button>
 
 </div>
     <div id="dagaigai">
         <h></h>
-        <p> You have finished all the formative questions, you can now go discuss with your partner</p>
- <button type="button" onclick="top6()" id='bt3'>get prepared for teaching your partner</button>
+        <p>Congrats! You have finished all the formative questions correctly, you can now teach your partner!</p><br>
+        <p>
+            <u>If you are teaching amplitude, make sure that you cover:</u>
+                <ul>1. What is deciding amplitude</ul>
+                <ul>2. How could we change amplitude for larger or smaller</ul>
+
+            <u>If you are teaching timbre, make sure that you cover:</u>
+                <ul>1. What is deciding timbre</ul>
+                <ul>2. How could we distinguish between different musical instruments</ul>
+        </p>
+ <button type="button" class="btn btn-light" onclick="top6()" id='bt3'>I am prepared</button>
 
 </div>
 <script src="jquery.js"></script>
 <script>
-document.getElementById('bt1').style.display="none";
-document.getElementById('bt3').style.display="none";
-var ques= new Array(
-             'During a concert rehearsal, the command asks violinist to play forte notes, what should the violinist change: ',
-             'Which of the following cases involves only the change of the amplitude of the sound?');
-             var optiona= new Array('Amplitude','National anthem is played in a flag-raising ceremony');
-             var optionb= new Array('Timbre ','An engine is being increased to its full power');
-             var optionc= new Array('Pitch','Orchestra plays a march or play a sonata');
-             var optiond= new Array('All them above','A drumer is beating the drum more and more heavily');
-             var answer= new Array('a','d');
-             var explain= new Array(
-             'The command asks the orchestra to play forte notes, which requires changes in the amplitude','Remember that to change the amplitude of the sound, you can only increase the force causing that vibration without any other change');
+    document.getElementById('bt1').style.display="none";
+    document.getElementById('bt3').style.display="none";
+    var ques= new Array('Q1. Take a piece of cardboard and let it pass through a wooden comb and a plastic comb, the two sounds are different in terms of:','Q2. Which of the following conclusions are correct? '
+                 );
+             var optiona= new Array('    Amplitude ','The higher the frequency of the vibrating part, the louder the loudness will be. ');
+             var optionb= new Array('    Pitch','The higher the frequency of the vibrating part, the higher the pitch will be. ');
+             var optionc= new Array('    Timbre','The higher the frequency of the vibrating part, the lower the pitch will be. ');
+             var optiond= new Array('    All of the above','The higher the frequency of the vibrating part, the better the timbre will be. ');
+             var answer= new Array('c','b');
+             var explain= new Array('The cardboard is passing through different materials of comb so that the timbres will be different',
+             'Pitch is always associated with the frequency of the voice as a vibration'
             
-var a;
-var towait = 29000;
-      // 2. This code loads the IFrame Player API code asynchronously.
+                    );
+            
+
       var tag = document.createElement('script');
 
       tag.src = "https://www.youtube.com/iframe_api";
@@ -135,48 +116,30 @@ var towait = 29000;
         event.target.playVideo();
       }
 
-
-      var done = false;
-      function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, towait);
-          done = true;
-        }
-      }
-      function stopVideo() {
-        player.pauseVideo();
-document.getElementById('player').style['z-index']=-10;
-document.getElementById('player').style['-webkit-transform']='translateZ(0)';
-      }
-      function stopVideo2() {
-        player.pauseVideo();
-	player.seekTo(552,true);
-player.playVideo();
-setTimeout(dojob, 28000);
-      }
-function dojob(){
-document.getElementById('toask2').style['z-index']=11;
-document.getElementById('toask2').style['-webkit-transform']='translateZ(0)';
-}
 var quesn=0;
 function gogo(){
-
- a=$('input:radio[name="9"]:checked').val();
-if(a===undefined){alert("input something, ok?");return undefined;}
- document.getElementById('bt1').style.display="";
- document.getElementById('bt3').style.display="";
-if(a==answer[quesn]){
-    document.getElementById('correct').innerHTML="Correct!";
-}
-else{document.getElementById('correct').innerHTML="Not Correct, you may read the explanation and try again";}
-document.getElementById('explain').innerHTML=explain[quesn];}
-function resubmit(){
-a=$('input:radio[name="9"]:checked').val();
-if(a==answer[quesn]){
-    document.getElementById('correct').innerHTML="Correct!";
-}
-else{document.getElementById('correct').innerHTML="Not Correct, you may read the explanation and try again";}
-document.getElementById('explain').innerHTML=explain[quesn];
+    
+    a=$('input:radio[name="9"]:checked').val();
+    if(a===undefined){
+        alert("Warning!You should enter your answer");
+        return undefined;
+    }
+    
+    document.getElementById('bt2').style.display="none";
+    document.getElementById('bt1').style.display="";
+    document.getElementById('bt3').style.display="";
+    if(a==answer[quesn]){
+        document.getElementById('correct').innerHTML="Correct!";
+    }
+    else{document.getElementById('correct').innerHTML="Not Correct, you may read the explanation and try again";}
+    document.getElementById('explain').innerHTML=explain[quesn];}
+    function resubmit(){
+    a=$('input:radio[name="9"]:checked').val();
+    if(a==answer[quesn]){
+        document.getElementById('correct').innerHTML="Correct!";
+    }
+    else{document.getElementById('correct').innerHTML="Not Correct, you may read the explanation and try again";}
+    document.getElementById('explain').innerHTML=explain[quesn];
 }
 function refresh(){
    document.getElementById('bt1').style.display="none";
@@ -191,13 +154,11 @@ function refresh(){
 }
 refresh();
 function next(){
+    document.getElementById('bt2').style.display="";
     quesn++;
     if(quesn>=ques.length){
         document.getElementById('dagaigai').style['z-index']=101;
-        document.getElementById('quan').style.display="none";
-         document.getElementById('quan').style.display="none";
-          document.getElementById('quan').style.display="none";
-           document.getElementById('quan').style.display="none";
+        document.getElementById('toask3').style.display="none";
     }
     else{
     
@@ -213,38 +174,7 @@ function last(){
 
 
 
-
-
-
-
-function go(){
- a=$('input:radio[name="1"]:checked').val();
-if(a=='a'){
-document.getElementById('player').style['z-index']=10;
-document.getElementById('player').style['-webkit-transform']='translateZ(0)';
-player.seekTo(40,true);
-towait=140000;
-player.playVideo();
-setTimeout(stopVideo2, towait);
-}
-
-if(a=='b'){
-document.getElementById('player').style['z-index']=10;
-document.getElementById('player').style['-webkit-transform']='translateZ(0)';
-player.seekTo(180,true);
-towait=197000;
-player.playVideo();
-setTimeout(stopVideo2, towait);}
-
-if(a=='c'){
-document.getElementById('player').style['z-index']=10;
-document.getElementById('player').style['-webkit-transform']='translateZ(0)';
-player.seekTo(377,true);
-towait=175000;
-player.playVideo();
-setTimeout(stopVideo2, towait);}
-}
     </script>
-</font>
+
   </body>
 </html>

@@ -35,7 +35,7 @@
 	z-index:100;}
 #dagaigai{
 	position:fixed;
-	left:40%;
+	left:50%;
 	top:100px;
 	right:100px;
 	bottom:10%;
@@ -118,11 +118,14 @@
 
 var quesn=0;
 function gogo(){
+    
     a=$('input:radio[name="9"]:checked').val();
     if(a===undefined){
         alert("Warning!You should enter your answer");
         return undefined;
     }
+    
+    document.getElementById('bt2').style.display="none";
     document.getElementById('bt1').style.display="";
     document.getElementById('bt3').style.display="";
     if(a==answer[quesn]){
@@ -151,9 +154,11 @@ function refresh(){
 }
 refresh();
 function next(){
+    document.getElementById('bt2').style.display="";
     quesn++;
     if(quesn>=ques.length){
         document.getElementById('dagaigai').style['z-index']=101;
+        document.getElementById('toask3').style.display="none";
     }
     else{
     
