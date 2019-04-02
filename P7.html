@@ -61,11 +61,6 @@
 	margin-left:-125px;
 	width:550px;height:550px;
 	z-index:1;}
-#quan{
-    position:relative;
-    left:-20px;
-    top:-41px;
-}
 .btn {
     float: right;
 }
@@ -75,12 +70,11 @@
 
 
 <div id="toask3">
-        <h></h>
         <p id="ques"></p>
-        <p id='opt1'>1</p><input type="radio"  name="9" value="a" id="quan"/>
-        <p id='opt2'>2</p><input type="radio"  name="9" value="b" id="quan"/>
-        <p id='opt3'>3</p><input type="radio"  name="9" value="c" id="quan"/>
-        <p id='opt4'>4</p><input type="radio"  name="9" value="d" id="quan"/>
+        <input type="radio"  name="9" value="a" id="quan"/><span id='opt1'>1</span><br><br>
+        <input type="radio"  name="9" value="b" id="quan"/><span id='opt2'>2</span><br><br>
+        <input type="radio"  name="9" value="c" id="quan"/><span id='opt3'>3</span><br><br>
+        <input type="radio"  name="9" value="d" id="quan"/><span id='opt4'>4</span><br><br>
        
  <button type="button" class ='btn btn-light' onclick="resubmit()" id='bt1'>resubmit</button>
  <button type="button" class ='btn btn-light' onclick="gogo()" id='bt2'>submit</button>
@@ -89,7 +83,7 @@
 </div>
     <div id="dagaigai">
         <h></h>
-        You have finished the summative test, your point is <p id='fen'></p> out of 6.
+        You have finished the summative test, your point is out of 6.
         We are waiting for your teammate's score, and your final score would be the average score of you two.
 
 
